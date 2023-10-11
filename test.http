@@ -1,0 +1,39 @@
+### REGISTER NEW USER
+POST https://localhost:3000/api/users/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "ST10082116",
+    "password": "PASSCODE"
+}
+
+### LOGON
+POST https://localhost:3000/api/users/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "ST10082116",
+    "password": "PASSCODE"
+}
+
+### GET ISSUES(POSTS) // Replace <Your-Token-Here> with the actual JWT token that you get after logging in
+GET https://localhost:3000/api/issues HTTP/1.1
+Authorization: Bearer 
+
+###
+Authorization: Bearer 
+POST https://localhost:3000/api/issues HTTP/1.1
+content-type: application/json
+Authorization: Bearer
+
+{
+    "title": "Water Supply Issue",
+    "description": "Description of the issue",
+    "department": "Department handling the issue"
+}
+
+
+### DELETE AN ISSUE(POST) // Replace <Your-Token-Here> with the actual JWT token and <Issue-ID> with the ID of the issue you want to delete
+DELETE https://localhost:3000/api/issues/652571c3110f3fd60ce2ffff HTTP/1.1
+Authorization: Bearer 
+###
